@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import Ex1 from "./exercicios/ex1"
 
 const App = () => {
 
   return (
     <>
       <div>
-        Meu teste
-      </div>        
+        <Ex1 />
+      </div>
     </>
   )
 }
