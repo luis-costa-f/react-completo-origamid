@@ -4,6 +4,7 @@
 // Se o gasto for maior que 10000 mostre uma mensagem
 
 import { useState } from "react";
+import Apresentacao from "../componentes/apresentacao/Apresentacao";
 
 const luana = {
     cliente: 'Luana',
@@ -43,17 +44,18 @@ const Ex1 = () => {
 
     return (
         <>
-            <hr />
-            <h1>Exercicio 1</h1>
-            <button onClick={trocaCliente}>Troca Cliente</button>
-            <p>Nome: {dados.cliente}</p>
-            <p>Idade: {dados.idade}</p>
-            <p>Situação: <span style={style}>{dados.ativa ? "Ativa" : "Inativa"}</span></p>
-            <p>Total Gasto: R$ {total}</p>
-            {total > 10000 && <p>Você esta gastando muito!</p>}
-            <hr />
+            <Apresentacao titulo="Exercicio 1">
+                <button onClick={trocaCliente}>Troca Cliente</button>
+                <p>Nome: {dados.cliente}</p>
+                <p>Idade: {dados.idade}</p>
+                <p>Situação: <span style={style}>{dados.ativa ? "Ativa" : "Inativa"}</span></p>
+                <p>Total Gasto: R$ {total}</p>
+                {total > 10000 && <p>Você esta gastando muito!</p>}
+            </Apresentacao>
+
         </>
     );
 };
 
 export default Ex1;
+
